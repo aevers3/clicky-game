@@ -1,0 +1,9 @@
+footer {
+    height: 50px;
+    background-color: red;
+}
+
+.react-icon {
+    font-size: 30px;
+    align-self: center;
+}
