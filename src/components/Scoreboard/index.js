@@ -2,13 +2,19 @@ import React from 'react';
 import GameScore from '../GameScore'
 import TopScore from '../TopScore';
 
-function Scoreboard() {
+function Scoreboard(props) {
+    
     return (
         <div>
             <h3>
-                <GameScore />
+                <GameScore
+                    incrementScore={props.incrementScore}
+                    score={props.score}
+                />
                 <span> | </span>
-                <TopScore />
+                <TopScore
+                    topScore={props.topScore}
+                />
             </h3>
         </div>
     )

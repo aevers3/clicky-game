@@ -3,46 +3,35 @@ import ImageTile from '../ImageTile';
 import images from '../../images';
 import './style.css';
 
-class Game extends React.Component {
-    state = {
-        images
-    }
 
-    handleClick = props => {
-        console.log(props.isClicked)
-        // If the image has not been clicked, update the state to clicked. Otherwise, game over.
-        if (!props.isClicked) {
-            this.setState((state) => {
-                let chosen = state.images.filter(image => image.id === props.id);
-                // Extract filtered object from returned array
-                chosen = chosen[0];
-                console.log('chosen', chosen);
-                chosen.isClicked = true;
-                return chosen;
-            });
-        } else {
-            alert('game over');
-        }
-        
+function Game(props) {
+    console.log('game', props);
+    let dupImages = props.images.slice();
+    let shuffledImages = [];
+    for (let i=0; i < 12; i++) {
+        // Randomly select an item from dupImages, save index for splice later
+        let index = Math.floor(Math.random() * dupImages.length);
+        let randomImage = dupImages[index];
+        // Push random image to shuffledImages array
+        shuffledImages.push(randomImage);
+        // Remove random image from dupImages to avoid duplicates on page
+        dupImages.splice(index, 1);
     }
-
-    render() {
-        console.log('new state', this.state);
-        console.log(images);
-        return (
-            <div className='gameWrapper container'>
-                {this.state.images.map(image => (
-                    <ImageTile
-                        handleClick={this.handleClick}
-                        key={image.id}
-                        id={image.id}
-                        image={image.image}
-                        isClicked={image.isClicked}
-                    />
-                ))}
-            </div>
-        );
-    }
+    console.log('shuffled', shuffledImages);
+    return (
+        <div className='gameWrapper container'>
+            {/* Map over the images.json array and create image tiles. */}
+            {shuffledImages.map(image => (
+                <ImageTile
+                    handleClick={props.handleClick}
+                    key={image.id}
+                    id={image.id}
+                    image={image.image}
+                    isClicked={image.isClicked}
+                />
+            ))}
+        </div>
+    );
 }
 
 export default Game;

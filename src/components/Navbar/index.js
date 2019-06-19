@@ -4,7 +4,7 @@ import WelcomeMessage from '../WelcomeMessage';
 import Scoreboard from '../Scoreboard';
 import './style.css';
 
-function Navbar() {
+function Navbar(props) {
     return (
         <div className='navbar fixed-top navbar-custom p-3 d-flex justify-content-around'>
             <div className='col-4 text-center'>
@@ -18,7 +18,10 @@ function Navbar() {
                 />
             </div>
             <div className='col-4 text-center'>
-                <Scoreboard />
+                <Scoreboard
+                    incrementScore={props.incrementScore}
+                    score={props.score}
+                    topScore={props.topScore} />
             </div>
         </div>
     )
