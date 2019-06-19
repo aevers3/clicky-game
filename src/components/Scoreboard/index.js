@@ -6,13 +6,9 @@ function Scoreboard() {
     return (
         <div>
             <h3>
-                <GameScore
-                    text='Score: 0'
-                />
+                <GameScore />
                 <span> | </span>
-                <TopScore
-                    text='Top Score: 0'
-                />
+                <TopScore />
             </h3>
         </div>
     )

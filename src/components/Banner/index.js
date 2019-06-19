@@ -5,7 +5,7 @@ import './style.css';
 
 function Banner() {
     return (
-        <div className='jumbotron banner d-flex justify-content-center'>
+        <div className='banner d-flex justify-content-center'>
             <div className='row align-self-center text-center'>
                 <div className='col-12'>
                     <BannerHeader
