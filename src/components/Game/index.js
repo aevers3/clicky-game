@@ -16,12 +16,12 @@ class Game extends React.Component {
                 let chosen = state.images.filter(image => image.id === props.id);
                 // Extract filtered object from returned array
                 chosen = chosen[0];
-                console.log('state', state);
+                console.log('chosen', chosen);
                 chosen.isClicked = true;
                 return chosen;
             });
         } else {
-            alert('game over')
+            alert('game over');
         }
         
     }
