@@ -1,62 +1,62 @@
 [
     {
         "id": 1,
-        "image": "x",
+        "image": "images/avocado-toast.jpg",
         "isClicked": false
     },
     {
         "id": 2,
-        "image": "x",
+        "image": "images/bacon.jpg",
         "isClicked": false
     },
     {
         "id": 3,
-        "image": "x",
+        "image": "images/cereal.jpg",
         "isClicked": false
     },
     {
         "id": 4,
-        "image": "x",
+        "image": "images/cinnamon-rolls.jpg",
         "isClicked": false
     },
     {
         "id": 5,
-        "image": "x",
+        "image": "images/eggs-bacon.jpg",
         "isClicked": false
     },
     {
         "id": 6,
-        "image": "x",
+        "image": "images/omelette.jpg",
         "isClicked": false
     },
     {
         "id": 7,
-        "image": "x",
+        "image": "images/overnight-oats.jpg",
         "isClicked": false
     },
     {
         "id": 8,
-        "image": "x",
+        "image": "images/pancakes.jpg",
         "isClicked": false
     },
     {
         "id": 9,
-        "image": "x",
+        "image": "images/quinoa.jpg",
         "isClicked": false
     },
     {
         "id": 10,
-        "image": "x",
+        "image": "images/sandwich.jpg",
         "isClicked": false
     },
     {
         "id": 11,
-        "image": "x",
+        "image": "images/tacos.jpg",
         "isClicked": false
     },
     {
         "id": 12,
-        "image": "x",
+        "image": "images/waffle.jpg",
         "isClicked": false
     }
 ]

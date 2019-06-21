@@ -4,7 +4,7 @@ import React from 'react';
 function TopScore(props) {
     return (
         <>
-            <span>Top Score: {props.topScore} </span>
+            <span>Top&nbsp;Score:&nbsp;{props.topScore} </span>
         </>
     )
 }

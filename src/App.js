@@ -13,7 +13,8 @@ class App extends React.Component {
   state = {
     images,
     score: 0,
-    topScore: 0
+    topScore: 0,
+    lastGuessed: 'reset'
   }
 
   // ==========================
@@ -25,12 +26,21 @@ class App extends React.Component {
   // Runs each time a correct tile is clicked - adds to game score.
   incrementScore = () => {
     this.setState({ score: this.state.score + 1 })
+  };
+
+  handleCorrect = () => {
+    this.setState({ lastGuessed: 'correct' })
+  };
+
+  handleIncorrect = () => {
+    this.setState({ lastGuessed: 'incorrect' })
   }
 
   handleClick = props => {
     console.log(props.isClicked)
     // If the image has not been clicked, update the state to clicked. Otherwise, game over.
     if (!props.isClicked) {
+      this.handleCorrect();
       this.incrementScore();
       this.setState((state) => {
         let chosen = state.images.filter(image => image.id === props.id);
@@ -41,6 +51,7 @@ class App extends React.Component {
         return chosen;
       });
     } else {
+      this.handleIncorrect();
       // If the game score beats topScore, update topScore
       if (this.state.score > this.state.topScore) {
         this.setState({ topScore: this.state.score })
@@ -64,7 +75,8 @@ class App extends React.Component {
         <Navbar
           incrementScore={this.incrementScore}
           score={this.state.score}
-          topScore={this.state.topScore} />
+          topScore={this.state.topScore}
+          lastGuessed={this.state.lastGuessed} />
         <Banner />
         <Game
           handleClick={this.handleClick}

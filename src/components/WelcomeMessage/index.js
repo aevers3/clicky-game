@@ -1,8 +1,10 @@
 import React from 'react';
 
+
+
 function WelcomeMessage(props) {
     return (
-        <h3>{props.text} </h3>
+            <h3>Click an image to begin!</h3>
     );
 }
 

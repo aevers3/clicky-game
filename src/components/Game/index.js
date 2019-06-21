@@ -19,7 +19,7 @@ function Game(props) {
     }
     console.log('shuffled', shuffledImages);
     return (
-        <div className='gameWrapper container'>
+        <div className='gameWrapper container p-5'>
             {/* Map over the images.json array and create image tiles. */}
             {shuffledImages.map(image => (
                 <ImageTile

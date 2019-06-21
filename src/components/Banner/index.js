@@ -6,10 +6,10 @@ import './style.css';
 function Banner() {
     return (
         <div className='banner d-flex justify-content-center'>
-            <div className='row align-self-center text-center'>
+            <div className='row align-self-center text-center p-4 mt-5 tint-box'>
                 <div className='col-12'>
                     <BannerHeader
-                        text='Clicky Game!'
+                        text='Breakfast Memory Game!'
                     />
                 </div>
                 <div className='col-12'>
