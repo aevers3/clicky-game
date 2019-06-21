@@ -1,6 +1,6 @@
 .banner {
     height: 400px;
-    background-image: url('images/breakfast-bg.jpg');
+    background-image: url('/images/breakfast-bg.jpg');
     /* background-image: linear-gradient(120deg, #eaee44, #ffa033); */
     background-repeat: repeat;
     background-size: cover;
