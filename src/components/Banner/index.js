@@ -18,7 +18,6 @@ function Banner() {
                     />
                 </div>
             </div>
-            <img src='images/breakfast-bg.jpg' />
         </div>
     );
 }
