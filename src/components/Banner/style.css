@@ -1,5 +1,7 @@
 .banner {
     height: 400px;
+    /* For deployment - add /clicky-game before /images... then run `npm run build` and `npm run deploy` before pushing */
+    /* To run locally - url link starts with /images */
     background-image: url('/clicky-game/images/breakfast-bg.jpg');
     /* background-image: linear-gradient(120deg, #eaee44, #ffa033); */
     background-repeat: repeat;
